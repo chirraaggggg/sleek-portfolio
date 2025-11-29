@@ -1,27 +1,42 @@
 "use client"
-import { rinkitFooterLink, rinkitShortName } from "@/data/ChiragData/data"
+import { chiragShortName } from "@/data/ChiragData/data"
+import { useState, useEffect } from "react"
+
+const motivationalQuotes = [
+  "The best error message is the one that never shows up. - Thomas Fuchs",
+  "The most damaging phrase in the language is 'We've always done it this way.' - Grace Hopper",
+  "The best performance improvement is the transition from the nonworking state to the working state. - John Ousterhout",
+  "The best way to get a project done faster is to start sooner. - Jim Highsmith",
+  "The most important single aspect of software development is to be clear about what you are trying to build. - Bjarne Stroustrup",
+  "The best code is no code at all. - Jeff Atwood"
+]
 
 const Footer = () => {
+  const [quote, setQuote] = useState<string>("")
+  
+  useEffect(() => {
+    // This will only run on the client side
+    const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]
+    setQuote(randomQuote)
+  }, [])
+
   return (
     <footer className="md:mb-12 mb-16">
       <div className="border-t border-zinc-700 my-6" />
-      <div className="flex flex-col gap-2.5 items-center">
-        <div className="flex flex-wrap gap-4 items-center md:text-base text-sm">
-          {rinkitFooterLink.map((link) => (
-            <a
-              key={link.id}
-              className="select-none md:text-base text-xl hover:opacity-75 flex gap-1 items-center transition duration-100"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={link.link}
-            >
-              <link.icon /> <span className="hidden md:block">{link.name}</span>
-            </a>
-          ))}
+      <div className="flex flex-col gap-4 items-center text-center px-4">
+        {quote && (
+          <p className="text-sm italic text-zinc-400 max-w-2xl">
+            "{quote}"
+          </p>
+        )}
+        <div className="flex flex-col gap-1">
+          <p className="text-sm text-zinc-500">
+            © {new Date().getFullYear()} {chiragShortName}. All rights reserved.
+          </p>
+          <p className="text-xs text-zinc-600">
+            {/* Designed & Made with ❤️ by chirag */}
+          </p>
         </div>
-        <p className="text-sm">
-          © 2025 {rinkitShortName}. All rights reserved.
-        </p>
       </div>
     </footer>
   )

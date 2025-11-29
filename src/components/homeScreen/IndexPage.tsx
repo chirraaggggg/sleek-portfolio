@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <Screen>
       <AnimatedWrapper>
-        <div className="flex flex-col gap-5 pt-16 md:pt-20">
+        <div className="flex flex-col gap-5 pt-8 md:pt-12">
           <InfoCard />
           <AboutMe />
           <ReachOut />

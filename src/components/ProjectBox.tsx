@@ -10,7 +10,7 @@ import Image from "next/image"
 import { toast } from "react-hot-toast"
 
 interface ProjectBoxProps {
-  img: string
+  img?: string
   status: boolean
   title: string
   content: string
@@ -72,7 +72,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
       className="project-box bg-zinc-900 cursor-pointer hover:bg-zinc-800/75 transition-colors duration-100 border border-zinc-700 rounded-md"
     >
       <AnimatePresence mode="wait">
-        {show && (
+        {show && preview && (
           <motion.div
             onClick={(e) => {
               e.stopPropagation()
@@ -90,7 +90,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
               height: 0,
             }}
             transition={{ ease: "easeInOut", duration: 0.3 }}
-            className=" overflow-hidden"
+            className="overflow-hidden"
           >
             <div className="p-2">
               <video className="rounded-md w-full" loop autoPlay controls>
@@ -102,19 +102,21 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
         )}
       </AnimatePresence>
       <div className="flex md:flex-row flex-col gap-3 p-2">
-        <div className="basis-[22%] p-1 select-none">
-          <Image
-            className="rounded-md md:h-[130px] h-[200px] w-full object-cover"
-            src={img}
-            alt="Project Image"
-            width={200}
-            height={200}
-          />
-        </div>
-        <div className="basis-[78%] flex flex-col md:gap-0 gap-1">
+        {img && (
+          <div className="basis-[22%] p-1 select-none">
+            <Image
+              className="rounded-md md:h-[130px] h-[200px] w-full object-cover"
+              src={img}
+              alt="Project Image"
+              width={200}
+              height={200}
+            />
+          </div>
+        )}
+        <div className={`${img ? 'basis-[78%]' : 'w-full'} flex flex-col gap-1.5`}>
           <div className="flex justify-between items-center">
-            <div className="flex gap-2 items-center truncate">
-              <h1 className="text-2xl font-semibold">{title}</h1>
+            <div className="flex flex-wrap gap-2 items-center">
+              <h1 className="text-xl font-semibold text-white/90">{title}</h1>
               {status ? (
                 <div className="select-none font-medium text-xs w-fit px-1.5 py-0.5 gap-0.5 rounded-md flex items-center bg-green-400/10 text-green-400">
                   <span className="animate-pulse">
@@ -194,7 +196,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
               )}
             </div>
           </div>
-          <p className="opacity-80">{content}</p>
+          <p className="text-zinc-300/90 text-sm leading-relaxed mt-1.5">{content}</p>
         </div>
       </div>
       <AnimatePresence mode="wait">

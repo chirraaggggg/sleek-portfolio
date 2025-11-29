@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Chirag Sharma - Portfolio",
+    default: "Chirag Sharma",
     template: "%s | Chirag Sharma"
   },
   description: "Portfolio of Chirag Sharma - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
@@ -26,40 +26,28 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        media: "(prefers-color-scheme: light)",
-        url: "/assets/Images/icon/icon-light.png",
-        type: "image/png",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/assets/Images/icon/icon-dark.png",
-        type: "image/png",
+        url: "/assets/Images/pfps/myphoto.jpeg",
+        type: "image/jpeg",
       },
     ],
     shortcut: [
       {
-        media: "(prefers-color-scheme: light)",
-        url: "/assets/Images/icon/icon-light.png",
-        type: "image/png",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/assets/Images/icon/icon-dark.png",
-        type: "image/png",
+        url: "/assets/Images/pfps/myphoto.jpeg",
+        type: "image/jpeg",
       },
     ],
   },
   openGraph: {
-    title: "Chirag Sharma - Portfolio",
+    title: "Chirag Sharma",
     description: "Portfolio of Chirag Sharma - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    url: "https://www.chiragsharma.tech",
+    // url: "https://www.chiragsharma.tech",
     siteName: "Portfolio",
     images: [
       {
         url: "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
         width: 1200,
         height: 630,
-        alt: "Chirag Sharma - Portfolio"
+        alt: "Chirag Sharma"
       },
     ],
     locale: "en-IN",
@@ -67,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chirag Sharma - Portfolio",
+    title: "Chirag Sharma",
     description: "Portfolio of Chirag Sharma - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
     images: ["https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png"],
     creator: "@chiragsharma",

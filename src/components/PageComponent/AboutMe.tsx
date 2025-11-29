@@ -1,5 +1,5 @@
 "use client"
-import { rinkitAbout } from "@/data/ChiragData/data"
+import { chiragAbout } from "@/data/ChiragData/data"
 import SectionTitle from "../SectionTitle"
 
 const AboutMe = () => {
@@ -9,7 +9,7 @@ const AboutMe = () => {
       <div className="flex flex-col gap-2">
         <div
           dangerouslySetInnerHTML={{
-            __html: rinkitAbout,
+            __html: chiragAbout,
           }}
           className="flex flex-col gap-1"
         />

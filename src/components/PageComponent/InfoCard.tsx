@@ -2,7 +2,8 @@
 import React, { useState } from "react"
 import { InfoTip } from "../InfoTip"
 import Available from "../Available"
-import { chiragBio, chiragImage, chiragLink, chiragName } from "@/data/ChiragData/data"
+import { chiragBio, chiragName } from "@/data/ChiragData/data"
+import { FaFilePdf } from "react-icons/fa"
 import { AnimatePresence } from "framer-motion"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -27,7 +28,7 @@ const InfoCard: React.FC = () => {
               alt="Profile"
               width={100}
               height={100}
-              className="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover"
+              className="rounded-2xl w-20 h-20 md:w-24 md:h-24 object-cover"
               priority
             />
           </div>
@@ -35,6 +36,15 @@ const InfoCard: React.FC = () => {
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
               <h1 className="text-2xl md:text-3xl font-bold">{chiragName}</h1>
+              <a 
+                href="/resume.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 group flex items-center gap-1 hover:bg-opacity-80 bg-zinc-800/50 transition-all duration-200 px-2.5 py-1 rounded-md border border-zinc-700/50 hover:scale-105"
+              >
+                <FaFilePdf className="text-sm text-white transition-colors duration-200" />
+                <span className="text-white text-xs font-medium">Resume</span>
+              </a>
               <div className="hidden md:block">
                 <Available text="Available" />
               </div>
@@ -47,20 +57,6 @@ const InfoCard: React.FC = () => {
               </svg>
               Gurgaon, India
             </p>
-            <div className="flex gap-3 mt-1">
-              {chiragLink.map((link: { id: number; name: string; link: string; icon: React.ComponentType<{ className?: string }> }) => (
-                <InfoTip key={link.id} text={link.name}>
-                  <a
-                    href={link.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-400 hover:text-white transition-colors"
-                  >
-                    <link.icon className="w-5 h-5" />
-                  </a>
-                </InfoTip>
-              ))}
-            </div>
           </div>
         </div>
 

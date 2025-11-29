@@ -13,8 +13,6 @@ export const TitleUpdater = () => {
     
     if (pathname === "/") {
       title = baseTitle
-    } else if (pathname.startsWith("/writings")) {
-      title = `Writings | ${baseTitle}`
     } else if (pathname.startsWith("/lab")) {
       title = `Lab | ${baseTitle}`
     }

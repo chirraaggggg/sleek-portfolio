@@ -1,8 +1,7 @@
 "use client"
-// Profile image is now directly referenced
 import Image from "next/image"
-import { navLinks } from "@/data/Common/data"
-import { InfoTipNav } from "../InfoTipNav"
+import { chiragLink } from "@/data/ChiragData/data"
+import { InfoTip } from "../InfoTip"
 import { useState } from "react"
 
 const Nav = () => {
@@ -14,27 +13,31 @@ const Nav = () => {
 
   return (
     <div className="fixed top-4 left-0 right-0 flex justify-center items-center">
-      <div className="relative bg-mainBlack border border-zinc-700 px-3 py-2 rounded-xl flex items-center gap-3">
-        <div className="flex gap-4 items-center">
-          {navLinks.map((nav) => (
-            <InfoTipNav key={nav.id} text={nav.name}>
-              <a className="" href={nav.link}>
-                {<nav.icon />}
-              </a>
-            </InfoTipNav>
+      <div className="relative bg-mainBlack border border-zinc-700 px-4 py-2.5 rounded-xl flex items-center gap-4">
+        <div className="flex gap-5 items-center">
+          {chiragLink.map((link) => (
+            <a
+              key={link.id}
+              href={link.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              <link.icon className="w-5 h-5" />
+            </a>
           ))}
         </div>
-        <div className="h-8 w-[1px] bg-zinc-500 mr-1"></div>
+        <div className="h-6 w-[1px] bg-zinc-700"></div>
         <div
-          className="rounded-md md:hover:brightness-75 transition duration-200"
+          className="rounded-md hover:brightness-75 transition duration-200"
           onMouseEnter={handleArrowVisibility}
         >
           <Image
             src="/assets/Images/pfps/myphoto.jpeg"
             alt="Profile Picture"
-            className="rounded-full w-9 h-9 object-cover"
-            width={36}
-            height={36}
+            className="rounded-lg w-8 h-8 object-cover"
+            width={32}
+            height={32}
           />
         </div>
         {isArrowVisible && (

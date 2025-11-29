@@ -6,19 +6,18 @@ import { SiLeetcode } from "react-icons/si"
 import { MdOutlineMail } from "react-icons/md"
 import { SiBluesky } from "react-icons/si"
 
-const chiragImage = "/assets/Images/pfps/chirag.jpg"
 const chiragName = "Chirag Sharma"
 const chiragShortName = "Chirag"
-const chiragBio = "Software Engineer"
+const chiragBio = "Software Developer"
 const chiragAbout = `
   <p>
-    Hey! I'm Chirag Sharma, a passionate software engineer who loves building innovative solutions and turning ideas into reality.
+    Hi! I'm Chirag Sharma, a software developer and data scientist who enjoys turning data and ideas into clean, practical, and user-focused products.
   </p>
   <p>
-    I'm proficient in modern web technologies and enjoy working with Next.js, React, and TypeScript to create seamless user experiences.
+    I work with Python and popular ML libraries on the data side and HTML, CSS, and JavaScript on the web side, preferring lightweight, performant solutions.
   </p>
   <p>
-    I love contributing to open-source projects and have actively participated in multiple hackathons, where I collaborate, build, and solve real-world problems.
+    Outside of work, I’m usually solving DSA problems, refining my portfolio, or experimenting with new ideas to share on GitHub and social platforms.
   </p>
 `
 
@@ -40,15 +39,8 @@ const chiragLink = [
   {
     id: 3,
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rinkitadhana",
+    link: "https://www.linkedin.com/in/chirags920/",
     icon: FaLinkedinIn,
-  },
-
-  {
-    id: 4,
-    name: "LeetCode",
-    link: "https://leetcode.com/u/rinkitadhana",
-    icon: SiLeetcode,
   },
 ]
 
@@ -57,20 +49,26 @@ const chiragContact =
 const chiragContactLink = [
   {
     id: 1,
-    name: "Twitter",
-    link: "https://x.com/intent/follow?screen_name=damnGruz",
-    icon: FaXTwitter,
+    name: "GitHub",
+    link: "https://github.com/chirraaggggg",
+    icon: FaGithub,
   },
   {
     id: 2,
-    name: "Discord",
-    link: "https://discord.gg/JgcDzHpWum",
-    icon: FaDiscord,
+    name: "X (Twitter)",
+    link: "https://x.com/chirraaggggg",
+    icon: FaXTwitter,
   },
   {
     id: 3,
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/chirags920/",
+    icon: FaLinkedinIn,
+  },
+  {
+    id: 4,
     name: "Email",
-    link: "mailto:therinkit@gmail.com",
+    link: "mailto:iamchirag182@gmail.com",
     icon: MdOutlineMail,
   },
 ]
@@ -79,50 +77,48 @@ const chiragFooterLink = [
   {
     id: 1,
     name: "Mail",
-    link: "mailto:therinkit@gmail.com",
+    link: "mailto:iamchirag182@gmail.com",
     icon: MdOutlineMail,
   },
   {
     id: 2,
-    name: "Github",
-    link: "https://github.com/rinkitadhana",
+    name: "GitHub",
+    link: "https://github.com/chirraaggggg",
     icon: FaGithub,
   },
-
   {
     id: 3,
-    name: "Twitter",
-    link: "https://x.com/intent/follow?screen_name=damnGruz",
-    icon: FaXTwitter,
-  },
-  {
-    id: 4,
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rinkitadhana",
+    link: "https://www.linkedin.com/in/chirags920/",
     icon: FaLinkedinIn,
   },
-  {
-    id: 5,
-    name: "LeetCode",
-    link: "https://leetcode.com/u/rinkitadhana",
-    icon: SiLeetcode,
-  },
+  // {
+  //   id: 4,
+  //   name: "Twitter",
+  //   link: "https://x.com/intent/follow?screen_name=damnGruz",
+  //   icon: FaXTwitter,
+  // },
+  // {
+  //   id: 5,
+  //   name: "LeetCode",
+  //   link: "https://leetcode.com/u/rinkitadhana",
+  //   icon: SiLeetcode,
+  // },
   // {
   //   id: 6,
   //   name: "Instagram",
   //   link: "https://www.instagram.com/rnkktt",
   //   icon: FaInstagram,
   // },
-  {
-    id: 6,
-    name: "Bluesky",
-    link: "https://bsky.app/profile/chiragsharma.bsky.social",
-    icon: SiBluesky,
-  },
+  // {
+  //   id: 6,
+  //   name: "Bluesky",
+  //   link: "https://bsky.app/profile/chiragsharma.bsky.social",
+  //   icon: SiBluesky,
+  // },
 ]
 
 export {
-  chiragImage,
   chiragName,
   chiragShortName,
   chiragBio,
@@ -131,16 +127,4 @@ export {
   chiragContact,
   chiragContactLink,
   chiragFooterLink,
-}
-
-export {
-  chiragImage as rinkitImage,
-  chiragBio as rinkitBio,
-  chiragContact as rinkitContact,
-  chiragContactLink as rinkitContactLink,
-  chiragName as rinkitName,
-  chiragShortName as rinkitShortName,
-  chiragAbout as rinkitAbout,
-  chiragLink as rinkitLink,
-  chiragFooterLink as rinkitFooterLink,
 }

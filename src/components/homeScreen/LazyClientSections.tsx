@@ -2,17 +2,13 @@
 import dynamic from "next/dynamic"
 
 const Projects = dynamic(() => import("../PageComponent/Projects"), { ssr: false })
-const Writings = dynamic(() => import("../PageComponent/Writings"), { ssr: false })
-const Newsletter = dynamic(() => import("../PageComponent/Newsletter"), { ssr: false })
-const SupportMe = dynamic(() => import("../PageComponent/SupportMe"), { ssr: false })
 
-export default function LazyClientSections() {
+const LazyClientSections = () => {
   return (
     <>
       <Projects />
-      <Writings />
-      <Newsletter />
-      <SupportMe />
     </>
   )
 }
+
+export default LazyClientSections
