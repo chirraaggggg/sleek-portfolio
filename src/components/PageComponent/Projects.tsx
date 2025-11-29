@@ -18,7 +18,7 @@ const Projects = () => {
           >
             <ProjectBox
               title={project.title}
-              img={project.img}
+              img={"/assets/Images/project-placeholder.png"}
               content={project.content}
               status={project.status}
               skill={project.skill}
