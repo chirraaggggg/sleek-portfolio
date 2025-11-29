@@ -37,7 +37,7 @@ const InfoCard: React.FC = () => {
               <h1 className="text-2xl md:text-3xl font-bold">{chiragName}</h1>
               <a 
                 href="/resume.pdf" 
-                target="_blank
+                target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 group flex items-center gap-1 hover:bg-opacity-80 bg-zinc-800/50 transition-all duration-200 px-2.5 py-1 rounded-md border border-zinc-700/50 hover:scale-105"
               >
